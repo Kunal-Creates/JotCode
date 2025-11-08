@@ -1,0 +1,6 @@
+# Hide our local secrets file
+.env
+
+# Hide local development folders
+node_modules
+.wrangler/

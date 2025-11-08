@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>JotCode</title>
+        <link rel="icon" type="image/svg" href="+.svg" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="logo">+</div>
+            <button id="runBtn" class="run-btn">Run</button>
+        </div>
+
+        <div class="split-root">
+            <div class="pane left-pane">
+                <pre
+                    id="editor"
+                    class="CodeMirror"
+                    contenteditable="true"
+                    spellcheck="false"
+                >
+// Try some code. Gemini will auto-detect the language.
+// Example (Rust):
+// fn main() {
+//   println!("Hello world");
+// }</pre
+                >
+            </div>
+
+            <div class="pane right-pane">
+                <pre id="output" class="output-body">
+No output yet. Press Run to simulate execution.</pre
+                >
+            </div>
+        </div>
+
+        <div id="diagnostic" class="diagnostic-panel">
+            <div class="diag-header">
+                <div>AI Diagnostic</div>
+                <button id="closeDiag" class="small-btn">Close</button>
+            </div>
+            <pre id="diagnosticBody" class="diag-body">No diagnostics yet.</pre>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
