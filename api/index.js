@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       }
 
       // 5. Define the Google API URL and body
-      const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+      const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
       const geminiRequestBody = {
         contents: [{ parts: [{ text: prompt }] }],
         generationConfig: {
